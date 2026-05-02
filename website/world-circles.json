@@ -1,0 +1,135 @@
+{
+  "total": 118,
+  "data": [
+    {
+      "country": "Argentina",
+      "circles": 4,
+      "hc": "ar"
+    },
+    {
+      "country": "Belgium",
+      "circles": 1,
+      "hc": "be"
+    },
+    {
+      "country": "Brazil",
+      "circles": 3,
+      "hc": "br"
+    },
+    {
+      "country": "Bulgaria",
+      "circles": 2,
+      "hc": "bg"
+    },
+    {
+      "country": "Costa Rica",
+      "circles": 2,
+      "hc": "cr"
+    },
+    {
+      "country": "Czechia",
+      "circles": 9,
+      "hc": "cz"
+    },
+    {
+      "country": "Germany",
+      "circles": 3,
+      "hc": "de"
+    },
+    {
+      "country": "Ghana",
+      "circles": 3,
+      "hc": "gh"
+    },
+    {
+      "country": "India",
+      "circles": 1,
+      "hc": "in"
+    },
+    {
+      "country": "Italy",
+      "circles": 1,
+      "hc": "it"
+    },
+    {
+      "country": "Kenya",
+      "circles": 4,
+      "hc": "ke"
+    },
+    {
+      "country": "Kyrgyzstan",
+      "circles": 1,
+      "hc": "kg"
+    },
+    {
+      "country": "Mexico",
+      "circles": 7,
+      "hc": "mx"
+    },
+    {
+      "country": "Nigeria",
+      "circles": 20,
+      "hc": "ng"
+    },
+    {
+      "country": "Portugal",
+      "circles": 17,
+      "hc": "pt"
+    },
+    {
+      "country": "Qatar",
+      "circles": 1,
+      "hc": "qa"
+    },
+    {
+      "country": "Romania",
+      "circles": 1,
+      "hc": "ro"
+    },
+    {
+      "country": "Rwanda",
+      "circles": 1,
+      "hc": "rw"
+    },
+    {
+      "country": "Serbia",
+      "circles": 1,
+      "hc": "rs"
+    },
+    {
+      "country": "South Africa",
+      "circles": 2,
+      "hc": "za"
+    },
+    {
+      "country": "Spain",
+      "circles": 8,
+      "hc": "es"
+    },
+    {
+      "country": "Tanzania",
+      "circles": 2,
+      "hc": "tz"
+    },
+    {
+      "country": "Thailand",
+      "circles": 0,
+      "hc": "th"
+    },
+    {
+      "country": "UK",
+      "circles": 8,
+      "hc": "gb"
+    },
+    {
+      "country": "USA",
+      "circles": 15,
+      "hc": "us"
+    },
+    {
+      "country": "Uganda",
+      "circles": 1,
+      "hc": "ug"
+    }
+  ]
+}
