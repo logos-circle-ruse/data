@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Transparent Ruse",
+    "description": "# Requirements\n\n## Done\n\n- [x] React + Vite + TypeScript frontend (BG default, EN optional)\n- [x] Dark / light theme (system default + persistence; theme toggle as icon)\n- [x] Navigation: dashboard vs submit signal; mobile hamburger; logo returns to dashboard\n- [x] Signals list, status pie chart, signal detail modal, voting + priority by score\n- [x] Submit form: title, description, neighborhood as **dropdown**, attachments (camera + files + drag & drop)\n- [x] Remove **Submitter** field from UI (keep `submitter_name` in DB / backend compatible)\n- [x] Submit button not stuck disabled by Turnstile UI state (validation on submit when Turnstile is enabled)\n- [x] Neighborhood map (SVG): click to filter, status coloring, stats panel, \u201csee all\u201d list; removed \u201c\u0420\u0443\u0441\u0435\u201d label and map gradient\n- [x] Canonical neighborhood IDs + aliases for consistent naming / filtering\n- [x] Communication timeline in signal modal (original, AI summary, \u201csubmitted to municipality\u201d log; placeholders for municipality reply + AI review)\n- [x] Supabase: schema migrations (signals, events, attachments bucket, voting, `neighborhood_id`)\n- [x] Supabase Edge Functions: `intake` (moderation + summary + timeline seed + uploads), `vote`\n- [x] Public function access: deploy with `--no-verify-jwt` for browser calls (document security follow-up)\n- [x] Groq integration in `intake` (moderation JSON + summary)\n- [x] GitHub Actions workflow for GitHub Pages + `VITE_BASE_PATH` support in Vite\n- [x] README deployment notes (frontend secrets vs Supabase secrets)\n\n## Remaining / follow-up\n\n- [ ] **Turnstile end-to-end**: add `VITE_TURNSTILE_SITE_KEY` (GitHub Actions secrets) + `TURNSTILE_SECRET_KEY` (Supabase secrets); verify widget on production domain\n- [ ] **Hardening**: revisit `--no-verify-jwt` (rate limits, shared secret header, or anon JWT-only paths) before public scale-up\n- [ ] **Secrets hygiene**: rotate any keys/tokens that were shared in insecure channels\n- [ ] **GitHub Pages after repo rename**: Change repo name and confirm `VITE_BASE_PATH` matches new repo URL (or `/` for custom domain) and Pages permissions are correct\n- [ ] **Optional UX / product**: voting anti-abuse rules; active tab indicator in nav; filter non-neighborhood polygons from sidebar list only\n- [ ] **Optional ops**: GitHub Action to deploy Supabase migrations/functions on merge; monitoring/alerts\n\n\n\n## Acceptance criteria (v1 \"public beta\")\n\n- [ ] Citizen can submit a signal from production UI and it appears in DB + list + map filters correctly\n- [ ] Attachments upload works end-to-end on production\n- [ ] Voting works on production without auth errors\n- [ ] Summary per category\n   - [ ] Number of requests (overall and neighbourhood)\n   - [ ] Detailed description for every neighbourhood. If the problem is exactly the same then a single summary can be used and all neighbourhoods affected with a bullet point.\n- [ ] Turnstile enabled on production domain with spam protection acceptable to real users\n",
+    "members": 3,
+    "github_issues": 5,
+    "completed_pct": 0.0,
+    "chart_colours": [
+      {
+        "start": 0,
+        "end": 75,
+        "colour": "#4CAF50"
+      },
+      {
+        "start": 75,
+        "end": 100,
+        "colour": "#66BB6A"
+      }
+    ]
+  }
+]
