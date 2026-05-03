@@ -1,4 +1,5 @@
 import requests, json, os, logging, datetime
+import utils
 import pandas as pd
 from github import Github
 
@@ -199,25 +200,6 @@ COUNTRY_MAPPING = {
     "Zimbabwe": "ZWE"
 }
 
-def get_logger() -> logging.Logger:
-    """
-    Create the Logger
-    """
-    instance = logging.getLogger("circles")
-    instance.setLevel(logging.INFO)
-    instance.propagate = False
-
-    handler = logging.StreamHandler()
-    formatter = logging.Formatter(
-        f"[%(asctime)s] [%(levelname)s]\t%(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S"
-    )
-
-    handler.setFormatter(formatter)
-    instance.addHandler(handler)
-    return instance
-
-
 def get_highchart_mapping(logger: logging.Logger) -> dict:
     """
     Fetch the HC keys for JSON world map
@@ -266,41 +248,10 @@ def get_luma_events(logger: logging.Logger) -> pd.DataFrame:
     return data.copy()
 
 
-def commit_data(file_path: str, content: str, commit_message: str, logger: logging.Logger):
-    """
-    Commit the data to the repository
-    """
-    token = os.environ.get("TOKEN")
-    repository_name = os.environ.get("GITHUB_REPOSITORY")
-    branch = os.environ.get("GITHUB_REF_NAME", "main")
-
-    github_client = Github(token)
-    repo = github_client.get_repo(repository_name)
-
-    try:
-        existing_file = repo.get_contents(file_path, ref=branch)
-        repo.update_file(
-            path=file_path,
-            message=commit_message,
-            content=content,
-            sha=existing_file.sha,
-            branch=branch,
-        )
-
-        logger.info(f"Updated {file_path} on branch {branch}")
-
-    except Exception:
-        repo.create_file(
-            path=file_path,
-            message=commit_message,
-            content=content,
-            branch=branch,
-        )
-        logger.info(f"Uploaded {file_path} on branch {branch}")
 
 if __name__ == "__main__":
 
-    logger = get_logger()
+    logger = utils.get_logger()
     luma_events = get_luma_events(logger)
     highchart_mapping = get_highchart_mapping(logger)
 
@@ -319,10 +270,17 @@ if __name__ == "__main__":
     }
 
     json_content = json.dumps(data, indent=2)
+    
+    github_token = os.environ.get("TOKEN")
+    repository_name = os.environ.get("GITHUB_REPOSITORY")
 
-    commit_data(
+    g = Github(github_token)
+    repo = g.get_repo(repository_name)
+
+    utils.commit_data(
         file_path="website/world-circles.json",
         content=json_content,
         commit_message=f"circles: Logos data from Luma as of {datetime.datetime.now().date()}",
-        logger=logger
+        logger=logger,
+        repo=repo,
     )
