@@ -129,7 +129,7 @@ if __name__ == "__main__":
     data = get_website_updates()
     
     processed = []
-    for row in data.to_dict("records"):
+    for row in data.loc[data["is_new"]].to_dict("records"):
     
         if pd.isna(row["description"]):
             continue
@@ -175,3 +175,5 @@ if __name__ == "__main__":
             logger=logger,
             repo=repo,
         )
+    else:
+        logger.info("No new descriptions to process")
