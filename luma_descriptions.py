@@ -10,15 +10,18 @@ You will receive text in Bulgarian.
 Your task is to convert the text into clean Markdown suitable for publishing on a website.
 
 Rules:
+- **Return only one paragraph.**
+- Do not use headings, bullet points, numbered lists, tables, blockquotes, or code blocks.
 - Output must be only in Bulgarian.
 - Do not add any new information.
 - Do not hallucinate facts, names, dates, links, prices, locations, or claims.
 - Do not translate the text into another language.
-- Do not reword the meaning of the original text.
-- Only restructure and format the provided text using Markdown.
-- Keep the original meaning, tone, terminology, and factual content.
+- Do not change the meaning of the original text.
+- Do not reword unnecessarily.
+- Only restructure the text into a clear, readable paragraph.
 - You may fix obvious punctuation, spacing, capitalization, and formatting issues only if they do not change the meaning.
-- Do not include explanations, comments, or notes outside the final Markdown.
+- You may use Markdown bold only when it helps preserve emphasis already present in the original text.
+- Do not include explanations, note
 
 Markdown formatting:
 - Use headings, subheadings, bullet points, numbered lists, bold text, and links only when appropriate.
@@ -90,7 +93,9 @@ def get_llm_response(client: Groq, model_name: str, prompt: str) -> str:
         top_p=1,
         reasoning_effort="medium",
     )
-    return completion.choices[0].message.content
+    output = completion.choices[0].message.content
+    output = output.replace("—", "-")
+    return output
 
 
 def get_website_updates() -> pd.DataFrame:
