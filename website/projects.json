@@ -7,14 +7,16 @@
     "completed_pct": 0.0,
     "chart_colours": [
       {
+        "tag": "LLM",
         "start": 0,
         "end": 75,
         "colour": "#4CAF50"
       },
       {
+        "tag": "Website",
         "start": 75,
         "end": 100,
-        "colour": "#66BB6A"
+        "colour": "#2196F3"
       }
     ]
   }
