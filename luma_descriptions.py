@@ -152,13 +152,13 @@ if __name__ == "__main__":
             data.loc[query].copy(), 
             processed, 
             pd.DataFrame([events_data["updates"][0]])
-        ], ignore_index=True)
+        ], ignore_index=True).rename(columns={"date": "ref_date"})
 
-        final["date"] = pd.to_datetime(final["date"])
-        final = final.sort_values("date", ascending=False)\
-                    .drop(["is_new"], axis=1)\
-                    .reset_index(drop=True)\
-                    .assign(date = final["date"].astype(str))
+        final["ref_date"] = pd.to_datetime(final["ref_date"])
+        final = final.sort_values("ref_date", ascending=False)\
+                    .reset_index(drop=True)
+        final.insert(0, "date", final["ref_date"].astype(str))
+        final = final.drop(["ref_date", "is_new"], axis=1)
         
         events_data["updates"] = [
             {
