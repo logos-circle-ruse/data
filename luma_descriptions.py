@@ -1,5 +1,5 @@
 import utils
-import os, json, datetime
+import os, json
 import pandas as pd
 from groq import Groq
 from github import Github
@@ -10,18 +10,21 @@ You will receive text in Bulgarian.
 Your task is to convert the text into clean Markdown suitable for publishing on a website.
 
 Rules:
-- **Return only one paragraph.**
+- Return only one paragraph.
 - Do not use headings, bullet points, numbered lists, tables, blockquotes, or code blocks.
 - Output must be only in Bulgarian.
 - Do not add any new information.
-- Do not hallucinate facts, names, dates, links, prices, locations, or claims.
+- Do not hallucinate facts, names, links, prices, locations, or claims.
+- Do not include any dates.
+- Remove all dates from the output, including years, months, weekdays, exact dates, relative dates, event dates, deadlines, and date ranges.
+- Do not replace removed dates with vague phrases such as „скоро“, „наскоро“, „предстои“, „тогава“ or „в този период“, unless such wording already exists in the original text.
 - Do not translate the text into another language.
-- Do not change the meaning of the original text.
+- Do not change the meaning of the original text, except for removing date-related information.
 - Do not reword unnecessarily.
 - Only restructure the text into a clear, readable paragraph.
 - You may fix obvious punctuation, spacing, capitalization, and formatting issues only if they do not change the meaning.
 - You may use Markdown bold only when it helps preserve emphasis already present in the original text.
-- Do not include explanations, note
+- Do not include explanations, notes, labels, or comments outside the final paragraph.
 
 Markdown formatting:
 - Use headings, subheadings, bullet points, numbered lists, bold text, and links only when appropriate.
