@@ -231,12 +231,7 @@ def get_luma_events(logger: logging.Logger) -> pd.DataFrame:
     """
     Fetch Luma data from Institute of Free Technology
     """
-    url = "https://hasura.bi.status.im/api/rest/circle/events"
-    logger.info(f"Fetching Luma Events data from {url}")
-
-    data = requests.get(url).json().get("stg_external_circle_circle_event", [])
-    data = pd.DataFrame(data)
-    logger.info(f"GET: {len(data)} rows")
+    data = utils.get_circle_data(logger)
 
     column_mapping = {
         "location_country": "country",
