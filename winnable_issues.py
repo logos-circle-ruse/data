@@ -62,6 +62,7 @@ def create_data(repo: Repository.Repository, info: dict[Issue.Issue, Milestone.M
         for idx, (tag, count) in enumerate(tags.items()):
             gradient_end = int((count / total_count) * 100)
             point["chart_colours"].append({
+                "tag": tag,
                 "start": gradient_start,
                 "end": gradient_end + gradient_start,
                 "colour": COLOURS[idx]
@@ -80,16 +81,16 @@ if __name__ == "__main__":
 
     # Used in plots
     COLOURS = [
-        "#4CAF50",  # green (your start)
-        "#66BB6A",  # lighter green
+        "#4CAF50",  # green
         "#2196F3",  # blue
-        "#42A5F5",  # lighter blue
         "#FFC107",  # amber
-        "#FFD54F",  # lighter amber
-        "#FF7043",  # orange / red (adds contrast)
         "#EF5350",  # red
         "#9C27B0",  # purple
-        "#7E57C2"   # lighter purple
+        "#00BCD4",  # cyan
+        "#FF9800",  # orange
+        "#8BC34A",  # light green
+        "#3F51B5",  # indigo
+        "#E91E63",  # pink
     ]
     g = Github(github_token)
     repo = g.get_repo(pm_repo_name)
