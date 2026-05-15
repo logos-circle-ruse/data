@@ -46,12 +46,12 @@ Input text:
 Return only the final Markdown.
 """
 
-def get_circle_data(country: str, city: str) -> pd.DataFrame:
+def get_circle_data() -> pd.DataFrame:
     """
     Get all Luma event IDs and descriptions for the given `country` and `city`
     """
     data = utils.get_circle_data()
-    query = (data["location_city"].str.lower() == city.lower()) & (data["location_country"].str.lower() == country.lower())
+    query = data["event_name"].str.contains("Logos Circle Ruse")
     
     column_mapping = {
         "event_id": "luma_event_id",
@@ -105,7 +105,7 @@ def get_website_updates() -> pd.DataFrame:
     """
     Process the data
     """
-    circle_data = get_circle_data("Bulgaria", "Ruse")
+    circle_data = get_circle_data()
     luma_events = get_events()
 
     website_updates = pd.DataFrame(luma_events["updates"]).iloc[1:].reset_index(drop=True)
