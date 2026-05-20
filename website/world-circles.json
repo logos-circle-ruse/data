@@ -1,5 +1,5 @@
 {
-  "total": 122,
+  "total": 127,
   "data": [
     {
       "country": "Argentina",
@@ -30,6 +30,11 @@
       "country": "Czechia",
       "circles": 9,
       "hc": "cz"
+    },
+    {
+      "country": "Egypt",
+      "circles": 1,
+      "hc": "eg"
     },
     {
       "country": "Germany",
@@ -68,7 +73,7 @@
     },
     {
       "country": "Nigeria",
-      "circles": 20,
+      "circles": 22,
       "hc": "ng"
     },
     {
@@ -88,7 +93,7 @@
     },
     {
       "country": "Rwanda",
-      "circles": 1,
+      "circles": 2,
       "hc": "rw"
     },
     {
@@ -123,7 +128,7 @@
     },
     {
       "country": "USA",
-      "circles": 15,
+      "circles": 16,
       "hc": "us"
     },
     {
