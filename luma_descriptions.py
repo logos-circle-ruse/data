@@ -1,6 +1,10 @@
 import utils
-import os, json
+import os
+import json
 import pandas as pd
+import requests
+from html_to_markdown import convert
+from bs4 import BeautifulSoup
 from groq import Groq
 from github import Github
 
@@ -24,10 +28,20 @@ Rules:
 - Only restructure the text into a clear, readable paragraph.
 - You may fix obvious punctuation, spacing, capitalization, and formatting issues only if they do not change the meaning.
 - You may use Markdown bold only when it helps preserve emphasis already present in the original text.
+- Write all verbs in the sega istorichesko vreme (present historic tense) in Bulgarian. For example, use „провежда се", „включва", „представя" instead of „се проведе", „включваше", „представи".
 - Do not include explanations, notes, labels, or comments outside the final paragraph.
+- Write ALL verbs in Bulgarian past tense (минало свършено време) WITHOUT EXCEPTION.
+- This includes the very first sentence.
+- NEVER start with „Провежда се" — always use „Проведе се".
+- NEVER mix tenses within the same paragraph.
+- Do not mix Latin and Cyrillic script. Write everything in Bulgarian Cyrillic only.
+- Every single verb must be in past tense: „проведе се", „присъстваха", „обсъди се", „предложи се", „представи се".
+- Ensure strict grammatical gender agreement in Bulgarian between verbs, nouns, and adjectives. For example: „обсъди се проектът" (masculine), „обсъди се платформата" (feminine), „обсъди се представянето" (neuter).
+- Ensure strict agreement between verbs and their subjects in number (singular/plural).
+- If the subject is plural, the verb must also be plural. For example: „обсъди се проектът" (singular) but „обсъдиха се проектите" (plural).
+- Every single verb in the output must follow this rule without exception.
 
 Markdown formatting:
-- Use headings, subheadings, bullet points, numbered lists, bold text, and links only when appropriate.
 - Preserve important details from the original text.
 - Remove unnecessary repetition only if the same idea is repeated without adding new meaning.
 
@@ -46,55 +60,54 @@ Input text:
 Return only the final Markdown.
 """
 
-def get_circle_data() -> pd.DataFrame:
-    """
-    Get all Luma event IDs and descriptions for the given `country` and `city`
-    """
-    data = utils.get_circle_data()
-    query = data["event_name"].str.contains("Logos Circle Ruse")
-    
-    column_mapping = {
-        "event_id": "luma_event_id",
-        "event_description": "description"
-    }
-    data = data.loc[query, list(column_mapping.keys())]\
-                .reset_index(drop=True)\
-                .rename(columns=column_mapping)
-    
-    data["description"] = data["description"].apply(
-        lambda description: description[:description.index("За Logos")]
-    )
-    return data.copy()
-
-
 def get_events() -> dict:
     """
     Get current website events
     """
-    file_path = os.path.join(os.path.dirname(__file__), "website", "events.json")
-    
+    file_path = os.path.join(
+        os.path.dirname(__file__),
+        "website",
+        "events.json"
+    )
+
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     return data
 
 
-def get_llm_response(client: Groq, model_name: str, prompt: str) -> str:
+def scrape_event_text(
+    url: str
+) -> str:
+    """
+    Scrape event page content and convert it to Markdown
+    """
+    response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    post = soup.find(id="post_1")
+    return convert(str(post)).content
+
+
+def get_llm_response(
+    client: Groq,
+    model_name: str,
+    prompt: str
+) -> str:
     """
     Get the LLM's response
     """
     completion = client.chat.completions.create(
         model=model_name,
         messages=[
-        {
-            "role": "user",
-            "content": prompt
-        },
+            {
+                "role": "user",
+                "content": prompt
+            },
         ],
         temperature=0,
         max_completion_tokens=4096,
         top_p=1,
-        reasoning_effort="medium",
     )
     output = completion.choices[0].message.content
     output = output.replace("—", "-")
@@ -103,31 +116,21 @@ def get_llm_response(client: Groq, model_name: str, prompt: str) -> str:
 
 def get_website_updates() -> pd.DataFrame:
     """
-    Process the data
+    Load website updates
     """
-    circle_data = get_circle_data()
-    luma_events = get_events()
+    events = get_events()
+    updates = pd.DataFrame(events["updates"])
+    if "description" not in updates.columns:
+        updates["description"] = None
 
-    website_updates = pd.DataFrame(luma_events["updates"]).iloc[1:].reset_index(drop=True)
-    backfill = "description" not in website_updates.columns
+    updates["is_new"] = updates["description"].isna()
+    return updates.copy()
 
-    if backfill:
-        website_updates = website_updates.merge(circle_data, "left", "luma_event_id").assign(is_blank = True)
-    else:
-        event_mapping = circle_data.set_index("luma_event_id").to_dict()["description"]
-        website_updates = website_updates.assign(
-            is_blank = pd.isna(website_updates["description"])
-        )
-        website_updates["description"] = website_updates.apply(
-            lambda row: event_mapping.get(row["luma_event_id"]) if row["is_blank"] else row["description"], axis=1
-        )
-
-    website_updates = website_updates.rename(columns={"is_blank": "is_new"})
-    return website_updates.copy()
 
 if __name__ == "__main__":
 
     logger = utils.get_logger()
+
     github_token = os.environ.get("TOKEN")
     groq_api_key = os.environ.get("GROQ_API_KEY")
     repository_name = os.environ.get("GITHUB_REPOSITORY")
@@ -135,43 +138,64 @@ if __name__ == "__main__":
 
     groq_client = Groq(api_key=groq_api_key)
     data = get_website_updates()
-    
+
     processed = []
     for row in data.loc[data["is_new"]].to_dict("records"):
-    
-        if pd.isna(row["description"]):
+
+        url = row.get("url")
+
+        if not url:
+            logger.warning("Skipping row without URL")
             continue
-        
-        logger.info(f"Processing {row['luma_event_id']} [{row['date']}]")
-        row["description"] = get_llm_response(groq_client, model_name, LLM_PROMPT.format(text=row["description"]))
-        processed.append(row)
+
+        logger.info(f"Scraping {url}")
+
+        try:
+            scraped_text = scrape_event_text(url)
+            logger.info(
+                f"Generating description for {row.get('luma_event_id', 'unknown')}"
+            )
+            cleaned_description = get_llm_response(
+                groq_client,
+                model_name,
+                LLM_PROMPT.format(text=scraped_text)
+            )
+            row["description"] = cleaned_description
+            processed.append(row)
+
+        except Exception as e:
+            logger.error(f"Failed processing {url}: {e}")
 
     if processed:
+
         processed = pd.DataFrame(processed)
+
+        query = ~data.index.isin(processed.index)
+
+        final = pd.concat(
+            [
+                data.loc[query].copy(),
+                processed
+            ],
+            ignore_index=True
+        )
+        final = final.drop(columns=["is_new"])
+
         events_data = get_events()
-
-        query = ~data["luma_event_id"].isin(processed["luma_event_id"])
-        final = pd.concat([
-            data.loc[query].copy(), 
-            processed, 
-            pd.DataFrame([events_data["updates"][0]])
-        ], ignore_index=True).rename(columns={"date": "ref_date"})
-
-        final["ref_date"] = pd.to_datetime(final["ref_date"])
-        final = final.sort_values("ref_date", ascending=False)\
-                    .reset_index(drop=True)
-        final.insert(0, "date", final["ref_date"].astype(str))
-        final = final.drop(["ref_date", "is_new"], axis=1)
-        
         events_data["updates"] = [
             {
                 key: value
-                for key, value in event_update.items()
+                for key, value in row.items()
                 if not pd.isna(value)
             }
-            for event_update in final.to_dict("records")
+            for row in final.to_dict("records")
         ]
-        json_content = json.dumps(events_data, indent=2)
+
+        json_content = json.dumps(
+            events_data,
+            indent=2,
+            ensure_ascii=False
+        )
 
         g = Github(github_token)
         repo = g.get_repo(repository_name)
@@ -179,9 +203,10 @@ if __name__ == "__main__":
         utils.commit_data(
             file_path="website/events.json",
             content=json_content,
-            commit_message=f"events: Add formatted descriptions for missing descriptions",
+            commit_message="events: Add scraped descriptions",
             logger=logger,
             repo=repo,
         )
+
     else:
         logger.info("No new descriptions to process")

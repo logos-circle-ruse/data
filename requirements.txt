@@ -2,3 +2,5 @@ requests
 pandas 
 PyGithub 
 groq
+beautifulsoup4
+html-to-markdown
