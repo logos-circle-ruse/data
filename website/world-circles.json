@@ -1,5 +1,5 @@
 {
-  "total": 144,
+  "total": 148,
   "data": [
     {
       "country": "Argentina",
@@ -73,7 +73,7 @@
     },
     {
       "country": "Nigeria",
-      "circles": 31,
+      "circles": 32,
       "hc": "ng"
     },
     {
@@ -112,8 +112,13 @@
       "hc": "es"
     },
     {
+      "country": "Sudan",
+      "circles": 1,
+      "hc": "sd"
+    },
+    {
       "country": "Tanzania",
-      "circles": 2,
+      "circles": 3,
       "hc": "tz"
     },
     {
@@ -128,7 +133,7 @@
     },
     {
       "country": "USA",
-      "circles": 16,
+      "circles": 17,
       "hc": "us"
     },
     {
