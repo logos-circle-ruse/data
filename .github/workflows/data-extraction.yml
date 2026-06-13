@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -35,7 +35,7 @@ jobs:
       
       - name: Extract Winnable Issue progress
         env:
-          PROJECT_MANAGEMENT_REPOSITORY_NAME: ${{vars.PROJECT_MANAGEMENT_REPOSITORY_NAME}}
+          PROJECT_MANAGEMENT_REPOSITORY_NAME: ${{ vars.PROJECT_MANAGEMENT_REPOSITORY_NAME }}
           TOKEN: ${{ secrets.CLASSIC_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
