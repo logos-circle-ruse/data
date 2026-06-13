@@ -1,12 +1,8 @@
 import utils
-import os
-import json
 import pandas as pd
 import requests
-from html_to_markdown import convert
-from bs4 import BeautifulSoup
-from groq import Groq
 from github import Github
+from groq import Groq
 
 LLM_PROMPT = """
 You will receive text in Bulgarian.
