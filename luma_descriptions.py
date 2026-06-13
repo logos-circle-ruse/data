@@ -60,65 +60,11 @@ Input text:
 Return only the final Markdown.
 """
 
-def get_events() -> dict:
-    """
-    Get current website events
-    """
-    file_path = os.path.join(
-        os.path.dirname(__file__),
-        "website",
-        "events.json"
-    )
-
-    with open(file_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    return data
-
-
-def scrape_event_text(
-    url: str
-) -> str:
-    """
-    Scrape event page content and convert it to Markdown
-    """
-    response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
-    post = soup.find(id="post_1")
-    return convert(str(post)).content
-
-
-def get_llm_response(
-    client: Groq,
-    model_name: str,
-    prompt: str
-) -> str:
-    """
-    Get the LLM's response
-    """
-    completion = client.chat.completions.create(
-        model=model_name,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            },
-        ],
-        temperature=0,
-        max_completion_tokens=4096,
-        top_p=1,
-    )
-    output = completion.choices[0].message.content
-    output = output.replace("—", "-")
-    return output
-
-
 def get_website_updates() -> pd.DataFrame:
     """
     Load website updates
     """
-    events = get_events()
+    events = utils.get_events()
     updates = pd.DataFrame(events["updates"])
     if "description" not in updates.columns:
         updates["description"] = None
@@ -151,11 +97,11 @@ if __name__ == "__main__":
         logger.info(f"Scraping {url}")
 
         try:
-            scraped_text = scrape_event_text(url)
+            scraped_text = utils.scrape_event_text(url)
             logger.info(
                 f"Generating description for {row.get('luma_event_id', 'unknown')}"
             )
-            cleaned_description = get_llm_response(
+            cleaned_description = utils.get_llm_response(
                 groq_client,
                 model_name,
                 LLM_PROMPT.format(text=scraped_text)
@@ -181,7 +127,7 @@ if __name__ == "__main__":
         )
         final = final.drop(columns=["is_new"])
 
-        events_data = get_events()
+        events_data = utils.get_events()
         events_data["updates"] = [
             {
                 key: value
@@ -197,16 +143,17 @@ if __name__ == "__main__":
             ensure_ascii=False
         )
 
-        g = Github(github_token)
-        repo = g.get_repo(repository_name)
+        # g = Github(github_token)
+        # repo = g.get_repo(repository_name)
 
-        utils.commit_data(
-            file_path="website/events.json",
-            content=json_content,
-            commit_message="events: Add scraped descriptions",
-            logger=logger,
-            repo=repo,
-        )
+        # utils.commit_data(
+        #     file_path="website/events.json",
+        #     content=json_content,
+        #     commit_message="events: Add scraped descriptions",
+        #     logger=logger,
+        #     repo=repo,
+        # )
+        print(json_content)
 
     else:
         logger.info("No new descriptions to process")

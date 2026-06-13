@@ -2,6 +2,11 @@ import pandas as pd
 import logging, base64, requests
 from github import Repository
 from typing import Optional
+from groq import Groq
+from html_to_markdown import convert
+import os
+import json
+from bs4 import BeautifulSoup
 
 def get_logger() -> logging.Logger:
     """
@@ -69,3 +74,54 @@ def get_circle_data(logger: Optional[logging.Logger] = None) -> pd.DataFrame:
         logger.info(f"GET: {len(data)} rows")
 
     return data.copy()
+
+def get_events() -> dict:
+    """
+    Get current website events
+    """
+    file_path = os.path.join(
+        os.path.dirname(__file__),
+        "website",
+        "events.json"
+    )
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    return data
+
+def scrape_event_text(
+    url: str
+) -> str:
+    """
+    Scrape event page content and convert it to Markdown
+    """
+    response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    post = soup.find(id="post_1")
+    return convert(str(post)).content
+
+def get_llm_response(
+    client: Groq,
+    model_name: str,
+    prompt: str
+) -> str:
+    """
+    Get the LLM's response
+    """
+    completion = client.chat.completions.create(
+        model=model_name,
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            },
+        ],
+        temperature=0,
+        max_completion_tokens=4096,
+        top_p=1,
+    )
+    output = completion.choices[0].message.content
+    output = output.replace("—", "-")
+    return output
