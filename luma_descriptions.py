@@ -139,17 +139,16 @@ if __name__ == "__main__":
             ensure_ascii=False
         )
 
-        # g = Github(github_token)
-        # repo = g.get_repo(repository_name)
+        g = Github(github_token)
+        repo = g.get_repo(repository_name)
 
-        # utils.commit_data(
-        #     file_path="website/events.json",
-        #     content=json_content,
-        #     commit_message="events: Add scraped descriptions",
-        #     logger=logger,
-        #     repo=repo,
-        # )
-        print(json_content)
+        utils.commit_data(
+            file_path="website/events.json",
+            content=json_content,
+            commit_message="events: Add scraped descriptions",
+            logger=logger,
+            repo=repo,
+        )
 
     else:
         logger.info("No new descriptions to process")
