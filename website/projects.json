@@ -3,19 +3,19 @@
     "name": "Interactive Ruse",
     "description": null,
     "members": 0,
-    "github_issues": 3,
+    "github_issues": 4,
     "completed_pct": 0.0,
     "chart_colours": [
       {
-        "tag": "Website",
+        "tag": "Data",
         "start": 0,
-        "end": 50,
+        "end": 66,
         "colour": "#4CAF50"
       },
       {
-        "tag": "Data",
-        "start": 50,
-        "end": 100,
+        "tag": "Website",
+        "start": 66,
+        "end": 99,
         "colour": "#2196F3"
       }
     ]
