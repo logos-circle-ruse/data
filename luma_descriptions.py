@@ -1,6 +1,6 @@
 import utils
 import pandas as pd
-import requests
+import json, os
 from github import Github
 from groq import Groq
 
@@ -111,18 +111,15 @@ if __name__ == "__main__":
     if processed:
 
         processed = pd.DataFrame(processed)
-
         query = ~data.index.isin(processed.index)
 
-        final = pd.concat(
-            [
-                data.loc[query].copy(),
-                processed
-            ],
-            ignore_index=True
-        )
+        final = pd.concat([data.loc[query].copy(), processed], ignore_index=True)
         final = final.drop(columns=["is_new"])
 
+        final = final.assign(date = pd.to_datetime(final["date"]))\
+                     .sort_values("date", ascending=False)\
+                     .astype({"date": str})
+        
         events_data = utils.get_events()
         events_data["updates"] = [
             {
