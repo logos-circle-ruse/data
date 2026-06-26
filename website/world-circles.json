@@ -1,9 +1,9 @@
 {
-  "total": 148,
+  "total": 152,
   "data": [
     {
       "country": "Argentina",
-      "circles": 5,
+      "circles": 6,
       "hc": "ar"
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "country": "Nigeria",
-      "circles": 32,
+      "circles": 35,
       "hc": "ng"
     },
     {
