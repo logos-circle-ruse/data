@@ -1,124 +1,124 @@
 {
-  "total": 22161,
+  "total": 38328,
   "data": [
     {
       "country": "Argentina",
-      "circles": 750,
+      "circles": 1296,
       "hc": "ar"
     },
     {
       "country": "Belgium",
-      "circles": 125,
+      "circles": 216,
       "hc": "be"
     },
     {
       "country": "Brazil",
-      "circles": 375,
+      "circles": 648,
       "hc": "br"
     },
     {
       "country": "Bulgaria",
-      "circles": 250,
+      "circles": 432,
       "hc": "bg"
     },
     {
       "country": "Costa Rica",
-      "circles": 250,
+      "circles": 432,
       "hc": "cr"
     },
     {
       "country": "Czechia",
-      "circles": 1125,
+      "circles": 1944,
       "hc": "cz"
     },
     {
       "country": "Egypt",
-      "circles": 125,
+      "circles": 216,
       "hc": "eg"
     },
     {
       "country": "Germany",
-      "circles": 625,
+      "circles": 1080,
       "hc": "de"
     },
     {
       "country": "Ghana",
-      "circles": 500,
+      "circles": 864,
       "hc": "gh"
     },
     {
       "country": "India",
-      "circles": 750,
+      "circles": 1296,
       "hc": "in"
     },
     {
       "country": "Italy",
-      "circles": 125,
+      "circles": 216,
       "hc": "it"
     },
     {
       "country": "Kenya",
-      "circles": 500,
+      "circles": 864,
       "hc": "ke"
     },
     {
       "country": "Kyrgyzstan",
-      "circles": 125,
+      "circles": 216,
       "hc": "kg"
     },
     {
       "country": "Mexico",
-      "circles": 875,
+      "circles": 1512,
       "hc": "mx"
     },
     {
       "country": "Nigeria",
-      "circles": 6393,
+      "circles": 11064,
       "hc": "ng"
     },
     {
       "country": "Portugal",
-      "circles": 2625,
+      "circles": 4536,
       "hc": "pt"
     },
     {
       "country": "Qatar",
-      "circles": 125,
+      "circles": 216,
       "hc": "qa"
     },
     {
       "country": "Romania",
-      "circles": 125,
+      "circles": 216,
       "hc": "ro"
     },
     {
       "country": "Rwanda",
-      "circles": 250,
+      "circles": 432,
       "hc": "rw"
     },
     {
       "country": "Serbia",
-      "circles": 125,
+      "circles": 216,
       "hc": "rs"
     },
     {
       "country": "South Africa",
-      "circles": 250,
+      "circles": 432,
       "hc": "za"
     },
     {
       "country": "Spain",
-      "circles": 1125,
+      "circles": 1944,
       "hc": "es"
     },
     {
       "country": "Sudan",
-      "circles": 125,
+      "circles": 216,
       "hc": "sd"
     },
     {
       "country": "Tanzania",
-      "circles": 375,
+      "circles": 648,
       "hc": "tz"
     },
     {
@@ -128,17 +128,17 @@
     },
     {
       "country": "UK",
-      "circles": 1500,
+      "circles": 2592,
       "hc": "gb"
     },
     {
       "country": "USA",
-      "circles": 2250,
+      "circles": 3888,
       "hc": "us"
     },
     {
       "country": "Uganda",
-      "circles": 393,
+      "circles": 696,
       "hc": "ug"
     }
   ]
