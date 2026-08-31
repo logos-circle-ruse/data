@@ -1,0 +1,417 @@
+[
+    {
+        "name": "Baba Tonka Museum",
+        "longitude": 25.9502649145,
+        "latitude": 43.8518337528,
+        "tags": [
+            "museum",
+            "history",
+            "culture"
+        ],
+        "short_description": "Baba Tonka Museum is one of the emblematic cultural and historical sites in Ruse and a mandatory stop for every tourist who wants to explore the history of the region. Located in the home of Nikola Obretenov – the son of the legendary Baba Tonka – the museum presents key moments of the national liberation struggles and the role of Ruse during the Bulgarian Renaissance.",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "Museum “Zahari Stoyanov”",
+        "longitude": 25.9498006388,
+        "latitude": 43.85149055,
+        "tags": [
+            "museum",
+            "history",
+            "literature"
+        ],
+        "short_description": "The Zahari Stoyanov House Museum in Ruse is a restored 19th-century building dedicated to the renowned Bulgarian revolutionary, historian, and writer. It showcases his personal belongings, literary works, and period artifacts, highlighting the European modernization of the city and his role in the 1885 Unification of Bulgaria",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "Museum of Urban Life (House of Calliope)",
+        "longitude": 25.9516328884,
+        "latitude": 43.8523924921,
+        "tags": [
+            "museum",
+            "architecture",
+            "history"
+        ],
+        "short_description": "The Kaliopa House, also known as the Urban Lifestyle Museum, is a beautifully preserved 1864 historical building in Ruse that showcases the city's affluent bourgeois culture from the late 19th and early 20th centuries. It is famous for its romantic legend, luxurious period interiors, and European-influenced exhibits.",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "Regional History Museum",
+        "longitude": 25.9475932412,
+        "latitude": 43.8440298923,
+        "tags": [
+            "museum",
+            "history",
+            "art"
+        ],
+        "short_description": "The Rousse Regional Historical Museum, located in the former Battenberg Palace at pl. \"Knyaz Alexander Battenberg\" 3, traces the history and nature of Northeastern Bulgaria. Established in 1904, it houses over 140,000 artifacts, including the 4th-century BC gold-plated silver Borovo Treasure, medieval frescoes, and traditional urban lifestyle exhibits",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "Eco Museum",
+        "longitude": 25.9472998178,
+        "latitude": 43.8446111759,
+        "tags": [
+            "museum"
+        ],
+        "short_description": "The Ecomuseum (Eco Museum) is an interactive natural history and ecology center showcasing the coexistence of humans and nature along the Danube River. It is highly regarded as one of the best family-friendly attractions in the city.",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "Ancient Fortress Sexaginta Prista",
+        "longitude": 25.9459476001,
+        "latitude": 43.847051779,
+        "tags": [
+            "historical site",
+            "roman",
+            "fortress"
+        ],
+        "short_description": "Sexaginta Prista is an ancient Roman fortress and military port located on a hill overlooking the Danube River in the northwestern part of modern-day Ruse, Bulgaria. Literally translating to \"Port of the Sixty Ships,\" this strategic site served as a key naval base and defensive castellum along the Danubian Limes (the outer border of the Roman Empire). Today, the preserved remains function as an open-air exhibition managed by the Ruse Regional Historical Museum.",
+        "long_description": "",
+        "category": [
+            "historical site"
+        ]
+    },
+    {
+        "name": "Pantheon of the Revival",
+        "longitude": 25.9607670946,
+        "latitude": 43.8506155456,
+        "tags": [
+            "monument",
+            "memorial",
+            "history"
+        ],
+        "short_description": "The Pantheon of National Revival Heroes in Ruse is a monumental memorial and ossuary. Inaugurated in 1978 to honor the centennial of Bulgaria's liberation, it houses the remains of 39 prominent revolutionaries—such as Stefan Karadzha, Zahari Stoyanov, and Baba Tonka—and bears the inscribed names of over 450 freedom fighters.",
+        "long_description": "",
+        "category": [
+            "monument"
+        ]
+    },
+    {
+        "name": "Toma Kardzhiev House Museum",
+        "longitude": 25.9468013765,
+        "latitude": 43.8460674334,
+        "tags": [
+            "museum",
+            "ethnography",
+            "history"
+        ],
+        "short_description": "House Museum “Toma Kardzhiev” is a museum ethnographic collection at the Historical Museum in Ruse, opened in the home of the Bulgarian teacher and revolutionary Toma Kardzhiev, one of the leaders of the Russophile Rebellion in 1887.",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "National Museum of Transport and Communications",
+        "longitude": 25.963728646,
+        "latitude": 43.8607208301,
+        "tags": [
+            "museum",
+            "transport",
+            "history"
+        ],
+        "short_description": "The National Transport Museum, is the country's only transport museum. Located on the banks of the Danube River, it sits inside Bulgaria's first main railway station, a historic landmark built between 1864 and 1866.",
+        "long_description": "",
+        "category": [
+            "museum"
+        ]
+    },
+    {
+        "name": "Monument Of Bulgarian Maritime",
+        "longitude": 23.3353251999,
+        "latitude": 42.6966796549,
+        "tags": [
+            "monument",
+            "history"
+        ],
+        "short_description": "Unique of its kind in Bulgaria, the sailor's monument was inaugurated in the city of Ruse, on 19 December 1930, in the courtyard of the barracks fleet where, at the time, was based on the Danube flotilla – the beginning of the Bulgarian Navy. Sailor Monument is a symbol of the link between the ancient Roman port on the Danube and the Danube fleet, established centuries later – after our first fleet of Liberation of Bulgaria.",
+        "long_description": "",
+        "category": [
+            "monument"
+        ]
+    },
+    {
+        "name": "Trade House of Polycar and Canetti",
+        "longitude": 25.944512906276742,
+        "latitude": 43.84517016633874,
+        "tags": [
+            "architecture",
+            "history",
+            "literature"
+        ],
+        "short_description": "One of the great prides of Ruse is that it is the hometown of Elias Canetti - winner of the Nobel Prize for Literature.",
+        "long_description": "The Elias Canetti House in Ruse is a historic building connected to the family of Nobel Prize-winning writer Elias Canetti. Built in 1898 by architect Nigohos Bedrosyan, it originally served as the headquarters of the successful Polycar and Canetti trading company, which sold goods such as grain, coffee, and agricultural tools. Elias Canetti's grandfather, Elias Avram Canetti, was not only a respected businessman but also a generous philanthropist who supported many local causes. Over the years, the building housed several different organizations, and today it is managed by the Elias Canetti International Society, which uses it as a cultural center for exhibitions and events.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Sarkis Kuyumjian Commercial Building",
+        "longitude": 25.9488346159,
+        "latitude": 43.8455802622,
+        "tags": [
+            "architecture",
+            "commercial",
+            "history"
+        ],
+        "short_description": "In 1898, Nigohos Bedrosyan designed an impressive commercial building for the Armenian Sarkis Kuyumjian, a textile merchant.",
+        "long_description": "The Kuyumjian Building in Ruse was designed by architect Nigohos Bedrosyan in 1898 for the Armenian textile merchant Sarkis Kuyumjian. Originally built as a commercial center with shops and warehouses, it reflected Kuyumjian's successful business career before he moved to England and later opened a factory in Manchester. He generously donated much of his property in Ruse to the local Armenian Church, while his son, Dikran, became a well-known American writer and screenwriter under the name Michael Arlen. Today, the historic building remains in use, housing businesses while preserving furniture and belongings from the Kuyumjian family.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Knyaz Boris High School",
+        "longitude": 25.9479705776,
+        "latitude": 43.8447732967,
+        "tags": [
+            "architecture",
+            "history"
+        ],
+        "short_description": "The building of the former boys' high school \"Knyaz Boris\" was built in 1894 - 1898 according to the project of arch. Petko Momchilov and arch. Jordan Popov.",
+        "long_description": "The former Knyaz Boris Boys' High School in Ruse, built between 1894 and 1898, is one of Bulgaria's oldest and most prestigious schools. Designed by architects Petko Momchilov and Jordan Popov, it featured modern facilities for its time, including laboratories, a library, and central heating. The school played an important role in Bulgarian education and culture, as it was the birthplace of the Ruse Museum and the workplace of notable teachers who contributed to Bulgarian archaeology, literature, and music. Many of its graduates went on to become leading writers, scholars, and artists in Bulgaria.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "District Administration",
+        "longitude": 25.9475846404,
+        "latitude": 43.8440463094,
+        "tags": [
+            "architecture",
+            "public building",
+            "history"
+        ],
+        "short_description": "The building of the District Administration is the first large public building in the new Bulgarian state.",
+        "long_description": "The District Administration Building in Ruse, completed in 1882 and designed by Austrian architect Friedrich Grünanger, was the first major public building of the newly established Bulgarian state. Although often called the \"Battenberg Palace,\" it was originally built as the District Administration and served local government for over 70 years. After later being used by the District Court, the building was fully restored and, since 2007, has been home to the Ruse Regional Historical Museum, preserving the city's rich cultural and historical heritage.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Chamber of Commerce and Industry",
+        "longitude": 25.9489353553,
+        "latitude": 43.8440939753,
+        "tags": [
+            "architecture",
+            "commerce",
+            "history"
+        ],
+        "short_description": "The first Bulgarian Chamber of Commerce was founded in Ruse in 1890 with Panayot Popov, industrialist and mayor of Ruse (1893-1894) as chairman.",
+        "long_description": "The first Chamber of Commerce Building in Ruse was built between 1914 and 1916 and designed by architect Nikola Lazarov in the Art Nouveau style with Baroque elements. It served as the headquarters of Bulgaria's first Chamber of Commerce, founded in Ruse in 1890, and played a key role in the economic development of Northern Bulgaria. Since 1954, the building has been home to the Lyuben Karavelov Regional Library, where it continues to serve the public while preserving its architectural and historical significance.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "The Bank of the Simeonov Brothers",
+        "longitude": 25.9504354583,
+        "latitude": 43.8453243728,
+        "tags": [
+            "architecture",
+            "bank",
+            "history"
+        ],
+        "short_description": "The Bank of the Simeonov Brothers is a building of lasting architectural value. ",
+        "long_description": "The Bank of the Simeonov Brothers is a valuable architectural landmark in Ruse, completed in 1895 and designed by architect Nigohos Bedrosyan with the participation of Ivan Hayes and P. Gavalas. The building combines rich decorative elements, sculptures, and elegant interior details, reflecting the prosperity of its owners. Founded by entrepreneurs Ivanitsa and Stefan Simeonovi, the bank became one of the most important financial institutions in Bulgaria before facing bankruptcy due to foreign interests. Over the years, the building housed different financial and judicial institutions and today remains owned by DSK Bank, preserving its historical and architectural importance.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Balkan Bank",
+        "longitude": 25.9500325761,
+        "latitude": 43.8466481605,
+        "tags": [
+            "architecture",
+            "bank",
+            "history"
+        ],
+        "short_description": "The building of the Balkan Bank (later the Bulgarian Credit Bank) was built in 1906 by the famous Ruse architect Spiros Valsamaki by order of the Bebis brothers.",
+        "long_description": "The former Balkan Bank Building in Ruse was built in 1906 by architect Spiros Valsamaki for the Bebis brothers' grain company. Originally used for warehouses and offices, it was later purchased by Balkan Bank, which financed major industrial projects in the city. The building was expanded over the years and became a three-story structure, later housing the Bulgarian Credit Bank, a Russian club, restaurants, and cultural institutions. Since 2018, the building has been municipal property and is planned for restoration as part of Ruse's architectural heritage.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "The Bucklov Brothers Building", 
+        "longitude": 25.95053769267008,
+        "latitude": 43.8473452557346,
+        "tags": [
+            "architecture",
+            "commercial",
+            "history"
+        ],
+        "short_description": "In 1911, the Bucklov brothers financed the construction of a building for their activities.",
+        "long_description": "The Bucklov Brothers' House in Ruse was built in 1911 by engineer Gero Gerov as a commercial building with shops on the ground floor and the Popular Credit and Commercial Bank on the first floor. Founded by brothers Dimitar, Hristo, and later Peter Bucklov, the company became one of Bulgaria's successful businesses, trading leather goods, sewing machines, and bicycles with branches in several major cities. After the economic crisis of 1929 led to their bankruptcy, the building was used by different commercial establishments, including the famous “1001 Goods” store, and today it continues to serve commercial and office purposes.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Holy Trinity Cathedral Church",
+        "longitude": 25.95652554990489,
+        "latitude": 43.84762550442161,
+        "tags": [
+            "architecture",
+            "religion",
+            "history"
+        ],
+        "short_description": "The Holy Trinity Cathedral, built in 1632, is the oldest church in Ruse and the seat of the Ruse Metropolis.",
+        "long_description": "The Holy Trinity Cathedral is the oldest church in Ruse and the most important for the Ruse Metropolis. Built in 1632, it was dug four and a half meters below the level of the courtyard to meet the height restrictions imposed on Christian churches during Ottoman rule, so although it seems small from the outside, its interior is tall and spacious. Its present appearance dates from after the Liberation, with a three-aisled pseudo-basilica plan measuring 15.60 x 31.20 meters, a Russian-style dome above the stone entrance steps, and a bell tower rising 19 meters as the highest part of the church. The walls were painted in 1934 in a style resembling Russian icon painting, and stained glass windows were installed in 2000. Two chapels were added through donations: one dedicated to St. Alexander Nevsky, consecrated in 1884 and rebuilt in 1983 to house a museum collection of church utensils, icons, and old printed books, and one dedicated to St. St. Cyril and Methodius, consecrated in 1886.",
+        "category": [
+            "religion",
+            "architecture"
+        ]
+    },
+    {
+        "name": "All Saints Orthodox Church",
+        "longitude": 25.962977176592247,
+        "latitude": 43.85346367971471,
+        "tags": [
+            "architecture",
+            "religion",
+            "history"
+        ],
+        "short_description": "The All Saints Orthodox Church (Vseh Svyatih) stands in the Park of the Revivalists in Ruse, rebuilt after the original 1898 church was demolished in 1975 to make way for the Pantheon of National Revival Heroes.",
+        "long_description": "The idea of building a new Orthodox church in Ruse took shape in the mid-19th century, and despite early setbacks the community completed the All Saints Church, known locally as Vseh Svyatih, in 1898. In 1975 the original building was demolished to make way for the Pantheon of National Revival Heroes, and the wish to see it restored remained with the community for decades. After the fall of communism a public council was formed in 1993 to oversee the rebuilding, and construction began in earnest in 2007 with the support of local authorities and the community. By 2012 the exterior was nearly complete, and the project received significant help from the Bulgarian government and the Russian Orthodox Church, which donated eight bells cast by the Kremlin's master bell ringer. Today the church stands in the Park of the Revivalists, combining traditional Orthodox design with modern elements, a 23-meter bell tower, and an interior of restored icons and frescoes around a meticulously reconstructed altar.",
+        "category": [
+            "religion",
+            "architecture"
+        ]
+    },
+    {
+        "name": "Ruse Mufti's Building",
+        "longitude": 25.947896260283077,
+        "latitude": 43.84168888609507,
+        "tags": [
+            "architecture",
+            "religion",
+            "history"
+        ],
+        "short_description": "At the beginning of the XX century, between 1905 and 1907, a remarkable building was built in Ruse - the Revenue Building of the Ruse Muslim Board.",
+        "long_description": "The Revenue Building of the Ruse Muslim Board was built between 1905 and 1907 by chief architect Todor Petrov in the neoclassical style. Despite its connection with the Muslim community, the building was never used for religion purposes and was designed as a commercial property with shops and warehouses to generate rental income. Over the years, it housed the famous Bristol Hotel, later renamed several times, as well as various shops and restaurants. Today, the historic building continues to serve mainly as a place for restaurants, preserving its role as part of Ruse's vibrant urban life.",
+        "category": [
+            "religion"
+        ]
+    },
+    {
+        "name": "The Burovi Brothers' Bank",
+        "longitude": 25.9509023379,
+        "latitude": 43.8477275063,
+        "tags": [
+            "architecture",
+            "bank",
+            "history"
+        ],
+        "short_description": "The Burovi Bank was built in 1912 according to a design by the Hungarian architect. Janovic, and the construction manager is Eng. Gero Gerov.",
+        "long_description": "The Burovi Bank Building in Ruse was built in 1912 in the neoclassical style, designed by Hungarian architect Janovic and constructed under the supervision of engineer Gero Gerov. The elegant building features decorative elements such as a tower, medallion, and bas-relief figures, reflecting the architecture of the period. It belonged to the influential Burovi family, whose members played an important role in Bulgaria's economic and political development. Managed by Atanas Burov, the bank contributed to the growth of Ruse's economy and vocational education, while the building later served various public and commercial purposes.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Fisher Brewery",
+        "longitude": 25.95106941092659,
+        "latitude": 43.84765022125666,
+        "tags": [
+            "architecture",
+            "industry",
+            "history"
+        ],
+        "short_description": "In 1880, the Czech musician Josef Fischer arrived in Ruse with his family and opened a restaurant called Fischer in the then Golyam Varoš neighborhood.",
+        "long_description": "The Josef Fischer Building in Ruse began as a restaurant opened in 1880 by Czech musician Josef Fischer, which later became a popular place for music and celebrations. In 1912, the building was transformed into the city's second Apollo cinema, showing films brought from Sofia. Over the years, it operated under different names, including Maxim Gorky and Royal, before being demolished in 2009 and replaced by the modern Royal shopping complex, which continues the location's connection with public entertainment and commerce.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Bulgaria Insurance Company",
+        "longitude": 25.9515034244,
+        "latitude": 43.8478369511,
+        "tags": [
+            "architecture",
+            "insurance",
+            "history"
+        ],
+        "short_description": "In 1898, a three-storey building for the home of the first Bulgarian insurance company \"Bulgaria\" was erected on 30 Aleksandrovska Street.",
+        "long_description": "The building of the first Bulgarian insurance company “Bulgaria” was built in 1898 at 30 Aleksandrovska Street, designed by architect Eduard Winter under the direction of Udo Riabau. Founded in Ruse in 1891 by prominent citizens, the company became a successful insurance institution with offices across Europe and even in Chicago. After 1944, it was closed when insurance activities were centralized under the State Insurance Institute, and the building later served government offices. Today, despite partial damage and ownership issues preventing restoration, it remains a historic symbol of Bulgaria's early economic development, with the company's initials still visible on the facade.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Andre Turio's Building",
+        "longitude": 25.953639,
+        "latitude": 43.848972,
+        "tags": [
+            "architecture",
+            "commercial",
+            "history"
+        ],
+        "short_description": "In 1897, a four-storey building on the thriving Alexandrovska Street was designed by order of Andre Turio.",
+        "long_description": "The Teteven Hotel Building in Ruse was built in 1897 on Aleksandrovska Street by order of industrialist Andre Turio and designed by Italian architect Nino Rozti in a richly decorated Baroque style. Originally housing the Boulevard Hotel and a jewelry store, it later became the famous Teteven Hotel and confectionery after being purchased by confectioner Bratan Yotov Ravenski. The hotel was known for its luxury, modern facilities, and popular pastry shop, which became a favorite meeting place for generations of citizens. Today, the historic building is used mainly for offices and commercial spaces.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Ruse Drama Theater",
+        "longitude": 25.9526689873,
+        "latitude": 43.8481562396,
+        "tags": [
+            "architecture",
+            "theater",
+            "culture"
+        ],
+        "short_description": "With its magnificent silhouette in the center of Ruse, the Revenue Building, later the Sava Ognyanov Theater, is an emblematic building of the European architectural heritage of the Danube city.",
+        "long_description": "The Revenue Building, later known as the Sava Ognyanov Theater, is one of Ruse's most important architectural landmarks and a symbol of the city's European heritage. Built between 1896 and 1900 by architects Georg Lang and Franz Stoltz, the building was originally designed to generate income for local schools through shops and offices. Its impressive facade features seven symbolic statues representing art, science, agriculture, trade, defense, and justice, while the dome is crowned with the figure of Mercury, the symbol of commerce. Over the years, the building became the home of the Ruse Drama Theater, the library, art gallery, and various cultural institutions, playing a central role in the city's cultural life. Today, it remains one of Ruse's most iconic historical buildings.",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "“Angel Kanchev“ University of Ruse",
+        "longitude": 25.97011846554909,
+        "latitude": 43.85463398499137,
+        "tags": [
+            "architecture"
+        ],
+        "short_description": "",
+        "long_description": "",
+        "category": [
+            "architecture"
+        ]
+    },
+    {
+        "name": "Monument of Liberty",
+        "longitude": 25.95338635970782,
+        "latitude": 43.848722578455295,
+        "tags": [
+            "architecture",
+            "history"
+        ],
+        "short_description": "",
+        "long_description": "",
+        "category": [
+            "architecture"
+        ]
+    }
+]
