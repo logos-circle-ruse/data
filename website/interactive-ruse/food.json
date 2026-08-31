@@ -9,7 +9,8 @@
             "lunch",
             "drinks",
             "caf\u00e9",
-            "danube"
+            "danube",
+            "non-smoking"
         ],
         "category":[
             "breakfast",
@@ -27,7 +28,8 @@
             "lunch",
             "fish",
             "meat",
-            "danube"
+            "danube",
+            "non-smoking"
         ],
         "category":[
             "dinner",
@@ -41,7 +43,8 @@
         "tags":[
             "dinner",
             "asian",
-            "lunch"
+            "lunch",
+            "non-smoking"
         ],
         "category":[
             "dinner",
@@ -146,7 +149,8 @@
         "tags":[
             "dinner",
             "lunch",
-            "pizza"
+            "pizza",
+            "non-smoking"
         ],
         "category":[
             "dinner",
@@ -235,7 +239,8 @@
         "latitude":43.8474083324,
         "tags":[
             "drinks",
-            "caf\u00e9"
+            "caf\u00e9",
+            "non-smoking"
         ],
         "category":[
             "drinks",
@@ -248,7 +253,8 @@
         "latitude":43.8462860608,
         "tags":[
             "dinner",
-            "meat"
+            "meat",
+            "non-smoking"
         ],
         "category":[
             "dinner"
@@ -288,7 +294,8 @@
         "latitude":43.828659792,
         "tags":[
             "caf\u00e9",
-            "dessert"
+            "dessert",
+            "non-smoking"
         ],
         "category":[
             "caf\u00e9"
