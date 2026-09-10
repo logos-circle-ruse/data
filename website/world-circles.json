@@ -1,5 +1,5 @@
 {
-  "total": 194,
+  "total": 199,
   "data": [
     {
       "country": "Argentina",
@@ -73,7 +73,7 @@
     },
     {
       "country": "Nigeria",
-      "circles": 64,
+      "circles": 68,
       "hc": "ng"
     },
     {
@@ -128,7 +128,7 @@
     },
     {
       "country": "UK",
-      "circles": 12,
+      "circles": 13,
       "hc": "gb"
     },
     {
