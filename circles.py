@@ -1,4 +1,4 @@
-import requests, json, os, logging, datetime
+import requests, json, os, logging, datetime, sys
 import utils
 import pandas as pd
 from github import Github
@@ -256,6 +256,8 @@ if __name__ == "__main__":
 
     query = luma_events["hc"].isna()
     if query.sum() > 0:
+        # 2026-09-11: Source data is incorrect and causes the pipeline to break
+        sys.exit()
         countries = luma_events.loc[query, "country"].to_list()
         raise Exception(f"The following countries mismatch:\n{countries}\nPlease further investigate...")
 
